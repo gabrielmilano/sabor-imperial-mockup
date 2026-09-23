@@ -13,7 +13,7 @@
     const onScroll = () => {
         const h = document.documentElement;
         const scrolled = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-        progress.style.width = scrolled + "%";
+        if (progress) progress.style.width = scrolled + "%";
         $("#navbar").classList.toggle("navbar--scrolled", window.scrollY > 40);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -33,51 +33,57 @@
         })
     );
 
-    // ===== Hero slider =====
-    const slides = $$(".hero__slide");
-    const dotsWrap = $("#heroDots");
-    let current = 0;
-    let timer;
-
-    slides.forEach((_, i) => {
-        const btn = document.createElement("button");
-        btn.setAttribute("aria-label", "Slide " + (i + 1));
-        btn.addEventListener("click", () => goTo(i));
-        dotsWrap.appendChild(btn);
-    });
-    const dots = $$("#heroDots button");
-
-    function goTo(i) {
-        slides[current].classList.remove("active");
-        dots[current].classList.remove("active");
-        current = (i + slides.length) % slides.length;
-        slides[current].classList.add("active");
-        dots[current].classList.add("active");
+    // ===== Hero: título palavra a palavra + fade dos demais elementos =====
+    const hero = document.querySelector(".hero");
+    const title = document.querySelector(".hero__title");
+    if (hero && title) {
+        // atribui delay escalonado a cada palavra
+        title.querySelectorAll(".hero__word").forEach((w, i) => {
+            w.style.setProperty("--wd", `${0.15 + i * 0.08}s`);
+        });
+        const heroIO = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        hero.classList.add("in-view");
+                        heroIO.unobserve(hero);
+                    }
+                });
+            },
+            { threshold: 0.25 }
+        );
+        heroIO.observe(hero);
     }
 
-    function autoPlay() {
-        timer = setInterval(() => goTo(current + 1), 5000);
+    // ===== Marquee de fotos: duplica para loop contínuo =====
+    const marquee = document.getElementById("heroMarquee");
+    if (marquee) {
+        marquee.innerHTML += marquee.innerHTML;
     }
-    goTo(0);
-    autoPlay();
+
+    // ===== Ticker com loop contínuo =====
+    const track = document.getElementById("tickerTrack");
+    if (track) {
+        // duplica o conteúdo para o loop transladar perfeitamente
+        track.innerHTML += track.innerHTML;
+    }
 
     // ===== Cardápio tabs =====
-    const tabs = $$(".cardapio__tab");
+    const days = $$(".cardapio__day");
     const panels = $$(".cardapio__panel");
 
-    // Ativa a aba correspondente ao dia da semana (0=domingo ... 6=sábado).
-    // Como o restaurante abre de segunda a sábado (1..6), usa 1=Segunda.
+    // Ativa a aba correspondente ao dia da semana (1..6 = Seg a Sáb).
     const today = new Date().getDay();
     let startDay = today >= 1 && today <= 6 ? today - 1 : 0;
 
-    tabs.forEach((tab) => {
-        tab.addEventListener("click", () => {
-            setDay(parseInt(tab.dataset.day, 10));
+    days.forEach((day) => {
+        day.addEventListener("click", () => {
+            setDay(parseInt(day.dataset.day, 10));
         });
     });
 
     function setDay(i) {
-        tabs.forEach((t) => t.classList.toggle("active", parseInt(t.dataset.day, 10) === i));
+        days.forEach((d) => d.classList.toggle("active", parseInt(d.dataset.day, 10) === i));
         panels.forEach((p) => {
             p.classList.remove("active");
             if (parseInt(p.dataset.panel, 10) === i) {
@@ -107,7 +113,7 @@
         animateables.forEach((el) => el.classList.add("in-view"));
     }
 
-    // ===== Animated counters (destaques) =====
+    // ===== Animated counters (números) =====
     const counters = $$(".count");
     const animateCount = (el) => {
         const target = parseInt(el.dataset.count, 10) || 0;
@@ -138,14 +144,15 @@
         counters.forEach((c) => { c.textContent = c.dataset.count; });
     }
 
-    // ===== Smooth anchor (offset do navbar) =====
+    // ===== Smooth anchor (offset do navbar + topbar) =====
     $$('a[href^="#"]').forEach((a) => {
         a.addEventListener("click", (e) => {
             const target = $(a.getAttribute("href"));
             if (!target) return;
             e.preventDefault();
+            const offset = 84; // navbar + topbar
             window.scrollTo({
-                top: target.getBoundingClientRect().top + window.scrollY - 74,
+                top: target.getBoundingClientRect().top + window.scrollY - offset,
                 behavior: "smooth",
             });
         });

@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabor Imperial Restaurante | Blumenau - SC</title>
-    <meta name="description" content="O melhor restaurante buffet de Blumenau. Peixes, frutos do mar, carnes nobres e sobremesas variadas, todos os dias das 11h às 14h.">
+    <title>Sabor Imperial Restaurante | O melhor buffet de Blumenau</title>
+    <meta name="description" content="O melhor restaurante buffet de Blumenau. Peixes, frutos do mar, carnes nobres e sobremesas variadas, de segunda a sábado, das 11h às 14h.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 
-    <div class="scroll-progress" id="scrollProgress"></div>
+    <!-- AVISO SUPERIOR -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <span>Segunda a sábado &middot; 11h às 14h</span>
+            <span class="topbar__sep">&#10022;</span>
+            <span>R. Ângelo Dias, 251 &middot; Centro &middot; Blumenau</span>
+            <span class="topbar__sep">&#10022;</span>
+            <a href="tel:+554733260011" class="topbar__link">(47) 3326-0011</a>
+        </div>
+    </div>
 
     <!-- NAVBAR -->
     <header class="navbar" id="navbar">
@@ -21,13 +30,13 @@
                 <img src="src/img/logo.png" alt="Sabor Imperial Restaurante">
             </a>
             <nav class="navbar__menu" id="navMenu">
-                <a href="#home" class="navbar__link">Início</a>
-                <a href="#sobre" class="navbar__link">O Restaurante</a>
                 <a href="#cardapio" class="navbar__link">Cardápio</a>
+                <a href="#sobre" class="navbar__link">O Restaurante</a>
                 <a href="#diferenciais" class="navbar__link">Diferenciais</a>
+                <a href="#depoimentos" class="navbar__link">Avaliações</a>
                 <a href="#galeria" class="navbar__link">Galeria</a>
-                <a href="#localizacao" class="navbar__link">Localização</a>
-                <a href="tel:+554733260011" class="btn btn--brand navbar__cta">(47) 3326-0011</a>
+                <a href="#localizacao" class="navbar__link">Como chegar</a>
+                <a href="tel:+554733260011" class="btn btn--gold navbar__cta">Ligue &amp; reserve &#8594;</a>
             </nav>
             <button class="navbar__toggle" id="navToggle" aria-label="Abrir menu">
                 <span></span><span></span><span></span>
@@ -35,180 +44,342 @@
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero__slider" id="heroSlider">
-            <div class="hero__slide" style="background-image:url('src/img/hero-frutos-do-mar.jpg')"></div>
-            <div class="hero__slide" style="background-image:url('src/img/hero-carnes.jpg')"></div>
-            <div class="hero__slide" style="background-image:url('src/img/hero-saladas.jpg')"></div>
-            <div class="hero__slide" style="background-image:url('src/img/hero-doces.jpg')"></div>
-            <div class="hero__overlay"></div>
-        </div>
-        <div class="hero__content container" data-animate="fade-up">
-            <div class="hero__rating">
-                <span class="hero__rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <span class="hero__rating-text">4.7/5 no Google · 1.173 avaliações</span>
+    <!-- HERO MARQUEE -->
+    <section class="hero hero--marquee" id="home">
+        <div class="container hero__inner">
+            <div class="hero__tagline">
+                <span class="hero__tagline-star">&#10022;</span> Restaurante buffet &middot; Blumenau &middot; SC
             </div>
-            <span class="hero__eyebrow">O melhor restaurante buffet de Blumenau</span>
-            <h1 class="hero__title">Sabor <span>Imperial</span></h1>
-            <p class="hero__subtitle">Peixes, frutos do mar, carnes nobres e a famosa mesa de sobremesas. Todos os dias, das 11h às 14h, no coração de Blumenau.</p>
+            <h1 class="hero__title">
+                <span class="hero__word">Muito</span>
+                <span class="hero__word">mais</span>
+                <span class="hero__word">que</span>
+                <span class="hero__word">um</span>
+                <span class="hero__word">almoço:</span>
+                <span class="hero__word hero__word--em">uma</span>
+                <span class="hero__word hero__word--em">experiência</span>
+                <span class="hero__word hero__word--em">imperial.</span>
+            </h1>
+            <p class="hero__subtitle">Frutos do mar todos os dias, carnes nobres, mais de sessenta tipos de salada e a famosa mesa de sobremesas — servidos no coração de Blumenau.</p>
+            <div class="hero__badges">
+                <span class="hero__badge">&#9733;&#9733;&#9733;&#9733;&#9733; <strong>4.7/5</strong> &middot; 1.173 avaliações</span>
+                <span class="hero__badge hero__badge--dark">&#127881; Comida de Buteco 2026</span>
+            </div>
             <div class="hero__actions">
-                <a href="tel:+554733260011" class="btn btn--brand">Ligue e reserve (47) 3326-0011</a>
-                <a href="#cardapio" class="btn btn--outline">Ver cardápio da semana</a>
+                <a href="tel:+554733260011" class="btn btn--gold">Reserve seu horário &#8594;</a>
+                <a href="#cardapio" class="btn btn--ghost">Cardápio da semana</a>
             </div>
         </div>
-        <div class="hero__dots" id="heroDots"></div>
-    </section>
-
-    <!-- DESTAQUES (números reais) -->
-    <section class="highlights">
-        <div class="container">
-            <div class="highlights__grid">
-                <div class="highlights__item" data-animate="fade-up" data-delay="0">
-                    <span class="highlights__num"><span class="count" data-count="1173">0</span></span>
-                    <span class="highlights__label">avaliações no Google</span>
+        <div class="hero__marquee" aria-hidden="true">
+            <div class="hero__marquee-track" id="heroMarquee">
+                <div class="hero__marquee-item" style="--rot:-3deg">
+                    <img src="src/img/restaurante-4.jpg" alt="">
                 </div>
-                <div class="highlights__item" data-animate="fade-up" data-delay="100">
-                    <span class="highlights__num--stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                    <span class="highlights__label">Nota 4.7 de 5</span>
+                <div class="hero__marquee-item" style="--rot:2.5deg">
+                    <img src="src/img/destaque-frutosdomar.png" alt="">
                 </div>
-                <div class="highlights__item" data-animate="fade-up" data-delay="200">
-                    <span class="highlights__num"><span class="count" data-count="60">0</span>+</span>
-                    <span class="highlights__label">tipos de salada no buffet</span>
+                <div class="hero__marquee-item" style="--rot:-2deg">
+                    <img src="src/img/restaurante-9.jpg" alt="">
                 </div>
-                <div class="highlights__item" data-animate="fade-up" data-delay="300">
-                    <span class="highlights__num"><span class="count" data-count="6">0</span></span>
-                    <span class="highlights__label">dias por semana servindo almoço</span>
+                <div class="hero__marquee-item" style="--rot:3deg">
+                    <img src="src/img/destaque-sobremesas.png" alt="">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- O RESTAURANTE -->
-    <section class="section sobre" id="sobre">
-        <div class="container sobre__inner">
-            <div class="sobre__media" data-animate="fade-right">
-                <img src="src/img/restaurante-2.jpg" alt="Ambiente do Sabor Imperial Restaurante" class="sobre__img">
-                <img src="src/img/restaurante-6.jpg" alt="Buffet do Sabor Imperial" class="sobre__img sobre__img--alt">
-                <span class="sobre__badge">Tradição em <strong>Blumenau</strong></span>
-            </div>
-            <div class="sobre__content" data-animate="fade-left">
-                <div class="sobre__trust">
-                    <div class="sobre__trust-item">
-                        <span class="sobre__trust-score">4.7</span>
-                        <div>
-                            <strong>Google</strong>
-                            <span class="sobre__trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        </div>
-                    </div>
-                    <div class="sobre__trust-item">
-                        <span class="sobre__trust-score">4.7</span>
-                        <div>
-                            <strong>Tripadvisor</strong>
-                            <span class="sobre__trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        </div>
-                    </div>
-                    <div class="sobre__trust-item">
-                        <span class="sobre__trust-score">4.6</span>
-                        <div>
-                            <strong>Facebook</strong>
-                            <span class="sobre__trust-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                        </div>
-                    </div>
+                <div class="hero__marquee-item" style="--rot:-2.5deg">
+                    <img src="src/img/restaurante-5.jpg" alt="">
                 </div>
-                <span class="section-tag">O restaurante</span>
-                <h2 class="section-title">Uma referência em <span class="gradient-text">buffet</span></h2>
-                <p class="section-text">Com anos de tradição na gastronomia de Blumenau, o Sabor Imperial se consolidou como uma das principais referências em buffet da cidade, reconhecido pela qualidade, variedade e experiência completa que oferece aos seus clientes.</p>
-                <p class="section-text">Além da variedade de pratos quentes, saladas frescas e frutos do mar selecionados, a mesa de sobremesas é frequentemente apontada como um dos pontos altos da experiência.</p>
-                <div class="sobre__features">
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Frutos do mar todos os dias</div>
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Carnes nobres &amp; massas</div>
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Saladas frescas diárias</div>
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Mesa de sobremesas famosa</div>
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Buffet por quilo ou livre</div>
-                    <div class="sobre__feature"><span class="sobre__ico">&#10003;</span> Estacionamentos conveniados</div>
+                <div class="hero__marquee-item" style="--rot:2deg">
+                    <img src="src/img/destaque-buffet.png" alt="">
                 </div>
-                <a href="tel:+554733260011" class="btn btn--dark">Falar com o restaurante</a>
+                <div class="hero__marquee-item" style="--rot:-3deg">
+                    <img src="src/img/restaurante-2.jpg" alt="">
+                </div>
+                <div class="hero__marquee-item" style="--rot:3.5deg">
+                    <img src="src/img/hero-frutos-do-mar.jpg" alt="">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CARDÁPIO DA SEMANA -->
+    <!-- NÚMEROS -->
+    <section class="stats">
+        <div class="container stats__grid">
+            <div class="stats__item" data-animate="fade-up" data-delay="0">
+                <span class="stats__num">4.7<span class="stats__slash">/5</span></span>
+                <span class="stats__label">Nota no Google</span>
+            </div>
+            <div class="stats__item" data-animate="fade-up" data-delay="100">
+                <span class="stats__num"><span class="count" data-count="1173">0</span></span>
+                <span class="stats__label">avaliações reais</span>
+            </div>
+            <div class="stats__item" data-animate="fade-up" data-delay="200">
+                <span class="stats__num"><span class="count" data-count="60">0</span>+</span>
+                <span class="stats__label">tipos de salada</span>
+            </div>
+            <div class="stats__item" data-animate="fade-up" data-delay="300">
+                <span class="stats__num"><span class="count" data-count="6">0</span></span>
+                <span class="stats__label">dias por semana</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
     <section class="section cardapio" id="cardapio">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
                 <span class="section-tag">Nosso cardápio</span>
-                <h2 class="section-title">Todos os dias um <span class="gradient-text">prato especial</span></h2>
-                <p class="section-desc">Segunda a sábado, das 11h às 14h. Domingos e feriados fechado.</p>
+                <h2 class="section-title">O <em>especial</em> de cada dia</h2>
+                <p class="section-desc">Do bacalhau da segunda ao bacalhau à portuguesa do sábado — todos os dias um prato que é a estrela do buffet.</p>
             </div>
 
-            <div class="cardapio__tabs" data-animate="fade-up" role="tablist">
-                <button class="cardapio__tab active" data-day="0">Segunda</button>
-                <button class="cardapio__tab" data-day="1">Terça</button>
-                <button class="cardapio__tab" data-day="2">Quarta</button>
-                <button class="cardapio__tab" data-day="3">Quinta</button>
-                <button class="cardapio__tab" data-day="4">Sexta</button>
-                <button class="cardapio__tab" data-day="5">Sábado</button>
+            <div class="cardapio__nav" data-animate="fade-up" role="tablist">
+                <button class="cardapio__day" data-day="0">Segunda</button>
+                <button class="cardapio__day" data-day="1">Terça</button>
+                <button class="cardapio__day" data-day="2">Quarta</button>
+                <button class="cardapio__day" data-day="3">Quinta</button>
+                <button class="cardapio__day" data-day="4">Sexta</button>
+                <button class="cardapio__day" data-day="5">Sábado</button>
             </div>
 
             <div class="cardapio__panel active" data-panel="0" data-animate="fade-up">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-segunda.png')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Torta de Bacalhau</li><li>Frutos do mar com molho branco</li><li>Lula à milanesa · Salmão · Linguado · Isca de peixe</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Frango à Norueguesa</li><li>Strogonoff de filé · Alcatra · Filé mignon</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Linguine de espinafre com ervas</li><li>Kibe · Batata doce · Pastel de frango com e sem catupiry</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-segunda.png" alt="Especial de segunda-feira">
+                </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Segunda-feira</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Torta de Bacalhau</span><i>especial</i></li>
+                            <li><span>Frutos do mar com molho branco</span></li>
+                            <li><span>Lula à milanesa &middot; Salmão &middot; Linguado &middot; Isca de peixe</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Frango à Norueguesa</span><i>especial</i></li>
+                            <li><span>Strogonoff de filé &middot; Alcatra &middot; Filé mignon</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Linguine de espinafre com ervas</span><i>especial</i></li>
+                            <li><span>Kibe &middot; Batata doce &middot; Pastel de frango com e sem catupiry</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="cardapio__panel" data-panel="1">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-terca.jpg')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Camarão à Milanesa</li><li>Frutos do mar com molho branco · Truta · Congrio</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Coxa e Sobrecoxa assados</li><li>Strogonoff de filé · Filé de alcatra · Almôndegas</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Croquete de marreco</li><li>Nhoque · Linguiça toscana · Penne 4 queijos · Aipim frito · Pastel de carne com e sem catupiry</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-terca.jpg" alt="Especial de terça-feira">
+                </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Terça-feira</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Camarão à Milanesa</span><i>especial</i></li>
+                            <li><span>Frutos do mar com molho branco &middot; Truta &middot; Congrio</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Coxa e Sobrecoxa assados</span><i>especial</i></li>
+                            <li><span>Strogonoff de filé &middot; Filé de alcatra &middot; Almôndegas</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Croquete de marreco</span><i>especial</i></li>
+                            <li><span>Nhoque &middot; Linguiça toscana &middot; Penne 4 queijos &middot; Aipim frito &middot; Pastel de carne com e sem catupiry</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="cardapio__panel" data-panel="2">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-quarta.jpg')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Caldeira de Peixe</li><li>Frutos do mar com molho branco · Linguado · Salmão</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Croquete de Marreco</li><li>Strogonoff de filé · Filé de alcatra · Peito de frango à milanesa · Fígado acebolado · Filé mignon</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Beringela Assada</li><li>Splatz · Talharim · Purê de batata · Pastel de frango com e sem catupiry · Repolho roxo e purê de maçã</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-quarta.jpg" alt="Especial de quarta-feira">
+                </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Quarta-feira</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Caldeira de Peixe</span><i>especial</i></li>
+                            <li><span>Frutos do mar com molho branco &middot; Linguado &middot; Salmão</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Croquete de Marreco</span><i>especial</i></li>
+                            <li><span>Strogonoff de filé &middot; Filé de alcatra &middot; Peito de frango à milanesa &middot; Fígado acebolado &middot; Filé mignon</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Beringela Assada</span><i>especial</i></li>
+                            <li><span>Splatz &middot; Talharim &middot; Purê de batata &middot; Pastel de frango com e sem catupiry &middot; Repolho roxo e purê de maçã</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="cardapio__panel" data-panel="3">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-quinta.png')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Linguado enrolado com queijo</li><li>Frutos do mar com molho branco · Congrio</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Almôndegas com cream cheese</li><li>Peito de frango · Strogonoff de filé · Coração grelhado · Filé de alcatra · Filé mignon</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Arroz King Georg</li><li>Beringela à milanesa · Penne com molho vermelho · Brócolis com champignon refogado · Lombinho com batatinha · Pastel de frango com e sem catupiry</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-quinta.png" alt="Especial de quinta-feira">
+                </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Quinta-feira</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Linguado enrolado com queijo</span><i>especial</i></li>
+                            <li><span>Frutos do mar com molho branco &middot; Congrio</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Almôndegas com cream cheese</span><i>especial</i></li>
+                            <li><span>Peito de frango &middot; Strogonoff de filé &middot; Coração grelhado &middot; Filé de alcatra &middot; Filé mignon</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Arroz King Georg</span><i>especial</i></li>
+                            <li><span>Beringela à milanesa &middot; Penne com molho vermelho &middot; Brócolis com champignon refogado &middot; Lombinho com batatinha &middot; Pastel de frango com e sem catupiry</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="cardapio__panel" data-panel="4">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-sexta.jpg')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Strogonoff de Camarão</li><li>Truta · Meca</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Língua Ensopada</li><li>Marreco recheado · Alcatra · Filé mignon · Peito de frango</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Panqueca de carne</li><li>Risoto de arroz 7 grãos · Purê de batata · Splatz · Linguini de manteiga · Pastel de camarão com e sem catupiry · Repolho roxo · Purê de maçã</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-sexta.jpg" alt="Especial de sexta-feira">
+                </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Sexta-feira</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Strogonoff de Camarão</span><i>especial</i></li>
+                            <li><span>Truta &middot; Meca</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Língua Ensopada</span><i>especial</i></li>
+                            <li><span>Marreco recheado &middot; Alcatra &middot; Filé mignon &middot; Peito de frango</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Panqueca de carne</span><i>especial</i></li>
+                            <li><span>Risoto de arroz 7 grãos &middot; Purê de batata &middot; Splatz &middot; Linguini de manteiga &middot; Pastel de camarão com e sem catupiry &middot; Repolho roxo &middot; Purê de maçã</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
                 </div>
             </div>
 
             <div class="cardapio__panel" data-panel="5">
-                <div class="cardapio__img" style="background-image:url('src/img/cardapio-sabado.png')"></div>
-                <div class="cardapio__body">
-                    <div class="cardapio__block"><span class="cardapio__cat">Frutos do mar</span><ul><li>Especial: Bacalhau à Portuguesa</li><li>Bacalhau · Congrio · Salmão · Frutos do mar com molho branco · Camarão à milanesa · Camarão ao bafo</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Carnes e aves</span><ul><li>Especial: Marreco Recheado</li><li>Peito de frango · Strogonoff de filé · Filé mignon · Filé de alcatra</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Pratos variados</span><ul><li>Especial: Penne com funghi e tomate seco</li><li>Molho branco com palmito e camarão · Splatz · Purê de batata com salsa e alho poró · Pastel de camarão com e sem catupiry</li></ul></div>
-                    <div class="cardapio__block"><span class="cardapio__cat">Sobremesas</span><ul><li>Sobremesas variadas</li></ul></div>
+                <div class="cardapio__media">
+                    <img src="src/img/cardapio-sabado.png" alt="Especial de sábado">
                 </div>
+                <div class="cardapio__menu">
+                    <h3 class="cardapio__menu-day">Sábado</h3>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Frutos do mar</span>
+                        <ul>
+                            <li><span>Especial: Bacalhau à Portuguesa</span><i>especial</i></li>
+                            <li><span>Bacalhau &middot; Congrio &middot; Salmão &middot; Frutos do mar com molho branco &middot; Camarão à milanesa &middot; Camarão ao bafo</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Carnes e aves</span>
+                        <ul>
+                            <li><span>Especial: Marreco Recheado</span><i>especial</i></li>
+                            <li><span>Peito de frango &middot; Strogonoff de filé &middot; Filé mignon &middot; Filé de alcatra</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Pratos variados</span>
+                        <ul>
+                            <li><span>Especial: Penne com funghi e tomate seco</span><i>especial</i></li>
+                            <li><span>Molho branco com palmito e camarão &middot; Splatz &middot; Purê de batata com salsa e alho poró &middot; Pastel de camarão com e sem catupiry</span></li>
+                        </ul>
+                    </div>
+                    <div class="cardapio__course">
+                        <span class="cardapio__course-cat">Sobremesas</span>
+                        <ul><li><span>Sobremesas variadas</span></li></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section sobre" id="sobre">
+        <div class="container sobre__grid">
+            <div class="sobre__media" data-animate="fade-right">
+                <figure class="sobre__photo">
+                    <img src="src/img/restaurante-2.jpg" alt="Ambiente do Sabor Imperial Restaurante">
+                    <span class="sobre__photo-frame"></span>
+                </figure>
+                <figure class="sobre__photo sobre__photo--alt">
+                    <img src="src/img/destaque-buffet.png" alt="Buffet de carnes">
+                </figure>
+                <div class="sobre__plate">
+                    <span class="sobre__plate-score">4.7</span>
+                    <span class="sobre__plate-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="sobre__plate-source">Google &middot; Tripadvisor &middot; Facebook</span>
+                </div>
+            </div>
+            <div class="sobre__content" data-animate="fade-left">
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
+                <span class="section-tag">O restaurante</span>
+                <h2 class="section-title">A tradição do melhor <em>buffet</em> de Blumenau</h2>
+                <p class="section-text">Com anos de tradição na gastronomia de Blumenau, o Sabor Imperial se consolidou como uma das principais referências em buffet da cidade — reconhecido pela qualidade, pela variedade e pela experiência completa que oferece aos seus clientes.</p>
+                <p class="section-text">Mais do que um simples almoço, uma verdadeira experiência gastronômica: pratos leves e saudáveis, carnes nobres, frutos do mar selecionados e uma mesa de sobremesas frequentemente apontada como o ponto alto da casa.</p>
+                <div class="sobre__features">
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Frutos do mar todos os dias</div>
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Carnes nobres e massas</div>
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Saladas frescas diárias</div>
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Mesa de sobremesas famosa</div>
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Buffet por quilo ou livre</div>
+                    <div class="sobre__feature"><span class="sobre__ico">&#9679;</span> Estacionamentos conveniados</div>
+                </div>
+                <a href="tel:+554733260011" class="btn btn--gold">Falar com o restaurante &#8594;</a>
             </div>
         </div>
     </section>
@@ -217,59 +388,65 @@
     <section class="section diferenciais" id="diferenciais">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
                 <span class="section-tag">Muito mais sabor</span>
-                <h2 class="section-title">Os <span class="gradient-text">diferenciais</span> da casa</h2>
-                <p class="section-desc">Uma vida saudável requer hábitos saudáveis, começando pela alimentação. No Sabor Imperial, variedade e qualidade em cada detalhe do buffet.</p>
+                <h2 class="section-title">Os pilares da <em>casa imperial</em></h2>
+                <p class="section-desc">Uma vida saudável requer hábitos saudáveis, começando pela alimentação. No Sabor Imperial, variedade e qualidade em cada detalhe.</p>
             </div>
             <div class="diferenciais__grid">
-                <div class="diferenciais__card" data-animate="fade-up" data-delay="0">
+                <article class="diferenciais__card" data-animate="fade-up" data-delay="0">
+                    <span class="diferenciais__num">I</span>
                     <div class="diferenciais__img" style="background-image:url('src/img/destaque-frutosdomar.png')"></div>
                     <div class="diferenciais__body">
                         <h3>Peixes e Frutos do mar</h3>
-                        <p>Todos os dias uma grande variedade de peixes e frutos do mar — uma opção gostosa e saudável.</p>
+                        <p>Todos os dias uma grande variedade — uma opção gostosa e saudável.</p>
                     </div>
-                </div>
-                <div class="diferenciais__card" data-animate="fade-up" data-delay="120">
+                </article>
+                <article class="diferenciais__card" data-animate="fade-up" data-delay="120">
+                    <span class="diferenciais__num">II</span>
                     <div class="diferenciais__img" style="background-image:url('src/img/destaque-buffet.png')"></div>
                     <div class="diferenciais__body">
                         <h3>Carnes variadas</h3>
-                        <p>Pratos tradicionais, carnes nobres, massas, molhos e sabores — tudo com a qualidade Imperial.</p>
+                        <p>Pratos tradicionais, carnes nobres, massas, molhos e sabores.</p>
                     </div>
-                </div>
-                <div class="diferenciais__card" data-animate="fade-up" data-delay="240">
+                </article>
+                <article class="diferenciais__card" data-animate="fade-up" data-delay="240">
+                    <span class="diferenciais__num">III</span>
                     <div class="diferenciais__img" style="background-image:url('src/img/destaque-sobremesas.png')"></div>
                     <div class="diferenciais__body">
                         <h3>Sobremesas e Saladas</h3>
-                        <p>As saladas são um verdadeiro destaque: muitas cores e sabores, leves e saudáveis — e as sobremesas, impecáveis.</p>
+                        <p>Cores, sabores e a famosa mesa de sobremesas da casa.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- RECONHECIMENTOS -->
-    <section class="reconhecimentos">
-        <div class="container reconhecimentos__inner" data-animate="fade-up">
-            <div class="reconhecimentos__item">
-                <span class="reconhecimentos__icon">&#127881;</span>
-                <div>
-                    <strong>Comida de Buteco 2026</strong>
-                    <span>Participante confirmado</span>
-                </div>
+    <!-- DEPOIMENTOS -->
+    <section class="section depoimentos" id="depoimentos">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
+                <span class="section-tag">O que dizem</span>
+                <h2 class="section-title">Quem prova, <em>recomenda</em></h2>
+                <p class="section-desc">Avaliações reais de clientes no Google e Tripadvisor.</p>
             </div>
-            <div class="reconhecimentos__item">
-                <span class="reconhecimentos__icon">&#9733;</span>
-                <div>
-                    <strong>4.7 de 5 no Google</strong>
-                    <span>1.173 avaliações reais</span>
-                </div>
-            </div>
-            <div class="reconhecimentos__item">
-                <span class="reconhecimentos__icon">&#127869;</span>
-                <div>
-                    <strong>Frutos do mar diários</strong>
-                    <span>Bacalhau, salmão, camarão e mais</span>
-                </div>
+            <div class="depoimentos__grid">
+                <blockquote class="depoimento" data-animate="fade-up" data-delay="0">
+                    <span class="depoimento__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <p>"É, sem dúvida, o melhor buffet de Blumenau. A seleção e a variedade de saladas são impressionantes, e as proteínas são de altíssima qualidade."</p>
+                    <footer class="depoimento__meta">James &middot; Google</footer>
+                </blockquote>
+                <blockquote class="depoimento" data-animate="fade-up" data-delay="120">
+                    <span class="depoimento__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <p>"O brownie cremoso servido quente é uma das melhores sobremesas que já experimentei na vida. As supermesas são uma delícia à parte."</p>
+                    <footer class="depoimento__meta">Tatiana &middot; Google</footer>
+                </blockquote>
+                <blockquote class="depoimento" data-animate="fade-up" data-delay="240">
+                    <span class="depoimento__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <p>"O melhor buffet da cidade! O buffet é cobrado por quilo, mas é tão delicioso quanto refeições à la carte. Vale muito a pena."</p>
+                    <footer class="depoimento__meta">Sérgio &middot; Google</footer>
+                </blockquote>
             </div>
         </div>
     </section>
@@ -278,20 +455,32 @@
     <section class="section galeria" id="galeria">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
                 <span class="section-tag">Galeria</span>
-                <h2 class="section-title">O ambiente <span class="gradient-text">Sabor Imperial</span></h2>
-                <p class="section-desc">Ambiente agradável, atendimento atencioso e um buffet que agrada do paladar simples ao mais exigente.</p>
+                <h2 class="section-title">O ambiente <em>imperial</em></h2>
+                <p class="section-desc">Ambiente aconchegante e um buffet que agrada do paladar simples ao mais exigente.</p>
             </div>
             <div class="galeria__grid">
-                <a href="src/img/restaurante-3.jpg" class="galeria__item" data-animate="fade-up" data-delay="0"><img src="src/img/restaurante-3.jpg" alt="Buffet do Sabor Imperial"></a>
-                <a href="src/img/restaurante-4.jpg" class="galeria__item" data-animate="fade-up" data-delay="60"><img src="src/img/restaurante-4.jpg" alt="Ambiente do restaurante"></a>
-                <a href="src/img/restaurante-5.jpg" class="galeria__item" data-animate="fade-up" data-delay="120"><img src="src/img/restaurante-5.jpg" alt="Pratos servidos"></a>
-                <a href="src/img/restaurante-8.jpg" class="galeria__item" data-animate="fade-up" data-delay="180"><img src="src/img/restaurante-8.jpg" alt="Detalhes do buffet"></a>
-                <a href="src/img/restaurante-9.jpg" class="galeria__item" data-animate="fade-up" data-delay="240"><img src="src/img/restaurante-9.jpg" alt="Mesa de sobremesas"></a>
-                <a href="src/img/restaurante-10.jpg" class="galeria__item" data-animate="fade-up" data-delay="300"><img src="src/img/restaurante-10.jpg" alt="Saladas e frescor"></a>
-                <a href="src/img/restaurante-11.jpg" class="galeria__item" data-animate="fade-up" data-delay="360"><img src="src/img/restaurante-11.jpg" alt="Frutos do mar"></a>
-                <a href="src/img/restaurante-12.jpg" class="galeria__item" data-animate="fade-up" data-delay="420"><img src="src/img/restaurante-12.jpg" alt="Carnes e pratos quentes"></a>
+                <a href="src/img/restaurante-3.jpg" class="galeria__item galeria__item--tall" data-animate="fade-up" data-delay="0"><img src="src/img/restaurante-3.jpg" alt="Buffet do Sabor Imperial"></a>
+                <a href="src/img/restaurante-5.jpg" class="galeria__item" data-animate="fade-up" data-delay="60"><img src="src/img/restaurante-5.jpg" alt="Pratos servidos"></a>
+                <a href="src/img/restaurante-8.jpg" class="galeria__item" data-animate="fade-up" data-delay="120"><img src="src/img/restaurante-8.jpg" alt="Detalhes do buffet"></a>
+                <a href="src/img/restaurante-10.jpg" class="galeria__item" data-animate="fade-up" data-delay="180"><img src="src/img/restaurante-10.jpg" alt="Saladas frescas"></a>
+                <a href="src/img/restaurante-11.jpg" class="galeria__item galeria__item--tall" data-animate="fade-up" data-delay="240"><img src="src/img/restaurante-11.jpg" alt="Frutos do mar"></a>
+                <a href="src/img/restaurante-6.jpg" class="galeria__item" data-animate="fade-up" data-delay="300"><img src="src/img/restaurante-6.jpg" alt="Ambiente do restaurante"></a>
             </div>
+        </div>
+    </section>
+
+    <!-- COMIDA DE BUTECO -->
+    <section class="buteco">
+        <div class="container buteco__inner" data-animate="fade-up">
+            <span class="buteco__ico">&#127881;</span>
+            <div class="buteco__text">
+                <span class="section-tag section-tag--light">Participação confirmada</span>
+                <h2 class="buteco__title">Comida de <em>Buteco 2026</em></h2>
+                <p class="buteco__desc">O Sabor Imperial está entre os participantes do concurso que elege os melhores petiscos e pratos de Blumenau. Confira o prato concorrente da casa.</p>
+            </div>
+            <a href="https://www.instagram.com/restaurantesaborimperial/" target="_blank" rel="noopener" class="btn btn--gold">Ver no Instagram</a>
         </div>
     </section>
 
@@ -299,27 +488,30 @@
     <section class="section localizacao" id="localizacao">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Localização</span>
-                <h2 class="section-title">Estamos no <span class="gradient-text">centro</span> de Blumenau</h2>
-                <p class="section-desc">Rua Ângelo Dias, 251 · Centro · Blumenau - SC · CEP 89010-020</p>
+                <div class="section-header__ornament">&#10022; &nbsp; &#10022;</div>
+                <span class="section-tag">Como chegar</span>
+                <h2 class="section-title">No <em>centro</em> de Blumenau</h2>
+                <p class="section-desc">Rua Ângelo Dias, 251 &middot; Centro &middot; Blumenau - SC &middot; CEP 89010-020</p>
             </div>
             <div class="localizacao__card" data-animate="fade-up">
                 <iframe src="https://maps.google.com/maps?q=Rua%20Angelo%20Dias%20251%20Blumenau%20SC&t=&z=16&ie=UTF8&iwloc=&output=embed" class="localizacao__map" loading="lazy" title="Mapa - Sabor Imperial Restaurante"></iframe>
                 <div class="localizacao__info">
+                    <span class="localizacao__label">Contato</span>
                     <a href="tel:+554733260011" class="localizacao__link">(47) 3326-0011</a>
                     <a href="mailto:jerusagraciolo@hotmail.com" class="localizacao__link">jerusagraciolo@hotmail.com</a>
-                    <span class="localizacao__hours">Segunda a sábado · 11h às 14h<br>Domingos e feriados fechado</span>
+                    <span class="localizacao__label localizacao__label--mt">Horário</span>
+                    <span class="localizacao__hours">Segunda a sábado &middot; 11h às 14h<br>Domingos e feriados fechado</span>
                     <div class="localizacao__social">
-                        <a href="https://www.instagram.com/restaurantesaborimperial/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-                        <a href="https://www.facebook.com/saborimperial/" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                        <a href="https://www.instagram.com/restaurantesaborimperial/" target="_blank" rel="noopener" aria-label="Instagram">&#9913;</a>
+                        <a href="https://www.facebook.com/saborimperial/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
                     </div>
                 </div>
             </div>
             <div class="localizacao__parks" data-animate="fade-up">
                 <span class="localizacao__parks-label">Estacionamentos conveniados:</span>
-                <span class="localizacao__park">Est. Lemes (lado Sindicato)</span>
+                <span class="localizacao__park">Est. Lemes</span>
                 <span class="localizacao__park">Banco Safra</span>
-                <span class="localizacao__park">Via Park (7 de Setembro)</span>
+                <span class="localizacao__park">Via Park</span>
                 <span class="localizacao__park">Est. Cultura Inglesa</span>
             </div>
         </div>
@@ -328,11 +520,12 @@
     <!-- CTA -->
     <section class="cta">
         <div class="container cta__inner" data-animate="fade-up">
-            <h2 class="cta__title">Seu almoço merece um toque imperial.</h2>
+            <span class="cta__ornament">&#10022;</span>
+            <h2 class="cta__title">Seu almoço merece um toque <em>imperial</em>.</h2>
             <p class="cta__desc">Segunda a sábado, das 11h às 14h. O melhor buffet de Blumenau espera por você.</p>
             <div class="cta__actions">
-                <a href="tel:+554733260011" class="btn btn--brand btn--lg">Ligue: (47) 3326-0011</a>
-                <a href="https://www.instagram.com/restaurantesaborimperial/" target="_blank" rel="noopener" class="btn btn--outline btn--lg">Siga no Instagram</a>
+                <a href="tel:+554733260011" class="btn btn--gold btn--lg">Ligue: (47) 3326-0011 &#8594;</a>
+                <a href="https://www.instagram.com/restaurantesaborimperial/" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Siga no Instagram</a>
             </div>
         </div>
     </section>
@@ -350,8 +543,8 @@
             </div>
             <div class="footer__col">
                 <h4>Navegação</h4>
-                <a href="#sobre">O Restaurante</a>
                 <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">O Restaurante</a>
                 <a href="#diferenciais">Diferenciais</a>
                 <a href="#galeria">Galeria</a>
             </div>
@@ -365,12 +558,13 @@
                 <h4>Contato</h4>
                 <a href="tel:+554733260011">(47) 3326-0011</a>
                 <a href="mailto:jerusagraciolo@hotmail.com">jerusagraciolo@hotmail.com</a>
-                <span>R. Ângelo Dias, 251 · Centro</span>
+                <span>R. Ângelo Dias, 251 &middot; Centro</span>
                 <span>Blumenau - SC</span>
             </div>
         </div>
         <div class="footer__bottom">
             <div class="container">
+                <span class="footer__divider">&#10022;</span>
                 <p>&copy; <span id="year"></span> Sabor Imperial Restaurante. Todos os direitos reservados.</p>
             </div>
         </div>
